@@ -2,7 +2,13 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Pateo Force">
+    <meta name="theme-color" content="#f9f9f9">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'><rect fill='%230066cc' width='180' height='180'/><text x='50%' y='50%' font-size='80' fill='white' text-anchor='middle' dominant-baseline='middle' font-family='monospace' font-weight='bold'>PF</text></svg>">
     <title>Pateo Force Trainer</title>
     <style>
         * {
@@ -14,6 +20,7 @@
         html, body {
             width: 100%;
             height: 100%;
+            height: 100dvh;
             overflow: hidden;
         }
 
@@ -25,12 +32,14 @@
 
         .container {
             width: 100vw;
-            height: 100vh;
+            height: 100dvh;
             display: flex;
             flex-direction: column;
             padding: 15px 10px;
             box-sizing: border-box;
             position: relative;
+            padding-top: max(15px, env(safe-area-inset-top));
+            padding-bottom: max(10px, env(safe-area-inset-bottom));
         }
 
         .header {
@@ -284,7 +293,7 @@
         const SQUARE_PADDING = 10;
 
         function generateRandomCount() {
-            return Math.floor(Math.random() * 20) + 6; // 6 a 25
+            return Math.floor(Math.random() * 10) + 6; // 6 a 15
         }
 
         function checkCollision(x, y, squares) {
