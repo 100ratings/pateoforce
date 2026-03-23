@@ -28,7 +28,7 @@
             height: 100vh;
             display: flex;
             flex-direction: column;
-            padding: 20px;
+            padding: 15px 10px;
             box-sizing: border-box;
             position: relative;
         }
@@ -36,19 +36,19 @@
         .header {
             text-align: center;
             flex-shrink: 0;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             z-index: 30;
         }
 
         h1 {
-            font-size: 36px;
-            margin-bottom: 5px;
+            font-size: 32px;
+            margin-bottom: 3px;
             letter-spacing: 2px;
         }
 
         .subtitle {
             color: #666;
-            font-size: 12px;
+            font-size: 11px;
         }
 
         .middle-section {
@@ -121,31 +121,32 @@
         .footer {
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 10px;
             flex-shrink: 0;
             align-items: center;
             z-index: 30;
             text-align: center;
+            padding-bottom: 10px;
         }
 
-            .footer .who-starts {
+        .footer .who-starts {
             display: block;
-            font-size: 16px;
+            font-size: 18px;
             font-weight: bold;
-            margin-bottom: 8px;
+            margin-bottom: 5px;
         }
 
         .buttons-container {
             display: flex;
-            gap: 15px;
+            gap: 10px;
             flex-wrap: wrap;
             justify-content: center;
             width: 100%;
         }
 
         button {
-            padding: 15px 25px;
-            font-size: 16px;
+            padding: 12px 20px;
+            font-size: 15px;
             font-weight: bold;
             border: none;
             border-radius: 4px;
@@ -155,6 +156,7 @@
             transition: all 0.3s;
             font-family: 'Courier New', monospace;
             touch-action: manipulation;
+            min-width: 140px;
         }
 
         button:hover {
@@ -166,16 +168,17 @@
         }
 
         .counter {
-            font-size: 12px;
+            font-size: 11px;
             color: #666;
+            margin-top: 5px;
         }
 
         .squares-container {
             position: absolute;
-            top: 80px;
+            top: 70px;
             left: 0;
             right: 0;
-            bottom: 150px;
+            bottom: 140px;
             width: 100%;
             pointer-events: none;
             z-index: 10;
